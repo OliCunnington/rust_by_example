@@ -16,7 +16,7 @@ impl fmt::Display for List {
             // For every element except the first, add a comma.
             // Use the ? operator to return on errors.
             if index != 0 { write!(f, ", ")?; }
-            write!(f, "{}", v)?;
+            write!(f, "{}: {}", index, v)?;
         }
 
         // Close the opened bracket and return a fmt::Result value.
